@@ -72,19 +72,19 @@
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
     const filterByYear = inventors.filter(item => item.year >= 1500 && item.year <= 1600);
-    console.table(`List of inventors who were born in the 1500's\n`, filterByYear);
+    console.log(`List of inventors who were born in the 1500's\n`, filterByYear);
     
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
     const inventorsFullName = inventors.map((item) => {return `${item.first} ${item.last}`})
-    console.table(`Full Name of Inventors\n`, inventorsFullName);
+    console.log(`Full Name of Inventors\n`, inventorsFullName);
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
     const sortByBirthdate = inventors.sort((a, b) => {
-        return a.live >= b.live ? 1 : -1
+        return a.year >= b.year ? 1 : -1
     })
-    console.table(`Sort inventors by birthdate\n`, sortByBirthdate)
+    console.log(`Sort inventors by birthdate\n`, sortByBirthdate)
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
@@ -94,13 +94,13 @@
             live: item.passed - item.year
         }]
     }, [])
-    console.table(`How many years live investors\n`,liveAllInvestors)
+    console.log(`How many years live investors\n`,liveAllInvestors)
 
     // 5. Sort the inventors by years lived
     const sortByLive = liveAllInvestors.sort((a, b)=> {
         return a.live >= b.live ? 1 : -1
     })
-    console.table(`Sort inventors by years lived\n`, sortByLive);
+    console.log(`Sort inventors by years lived\n`, sortByLive);
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
@@ -109,7 +109,7 @@
         const bLastName = b.slice(b.search(' '), b.length);
         return aLastName >= bLastName ? 1 : -1;
     })
-    console.table(`Sort people by last name\n`,sortPeopleByAlphabet)
+    console.log(`Sort people by last name\n`,sortPeopleByAlphabet)
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
@@ -121,7 +121,7 @@
         return {...acc,
         [item]: ++acc[item]}
     }, {})
-    console.table(`Sum up the instances of each of these\n`, sumEachInstances)
+    console.log(`Sum up the instances of each of these\n`, sumEachInstances)
   </script>
 </body>
 </html>
