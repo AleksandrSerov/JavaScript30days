@@ -10,10 +10,10 @@ let lastX = 0;
 let lastY = 0;
 let hue = 0;
 let direction = true;
+ctx.lineJoin = "square";
+ctx.lineCap = "square";
 
 const draw = e => {
-  ctx.lineJoin = "square";
-  ctx.lineCap = "square";
   if (!isDrawing) return;
   ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
   ctx.beginPath();
