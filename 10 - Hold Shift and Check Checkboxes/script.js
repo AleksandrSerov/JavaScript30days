@@ -10,10 +10,8 @@ const handleCheck = e => {
     checkboxes.forEach(checkbox => {
       if (checkbox === target || checkbox === lastChecked) {
         inBetween = !inBetween;
-        console.log("Starting check them in between");
       }
       checkbox.checked = inBetween && true;
-      console.log(inBetween);
     });
   }
   lastChecked = target;
