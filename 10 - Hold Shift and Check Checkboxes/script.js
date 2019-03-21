@@ -3,6 +3,7 @@ let lastChecked;
 
 const handleCheck = e => {
   const target = e.target;
+  console.log(target);
   const isShiftKey = e.shiftKey;
 
   let inBetween = false;
@@ -11,7 +12,9 @@ const handleCheck = e => {
       if (checkbox === target || checkbox === lastChecked) {
         inBetween = !inBetween;
       }
-      checkbox.checked = inBetween && true;
+      if (inBetween) {
+        checkbox.checked = true;
+      }
     });
   }
   lastChecked = target;
