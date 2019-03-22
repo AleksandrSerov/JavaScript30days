@@ -3,7 +3,6 @@ let lastChecked;
 
 const handleCheck = e => {
   const target = e.target;
-  console.log(target);
   const isShiftKey = e.shiftKey;
 
   let inBetween = false;
