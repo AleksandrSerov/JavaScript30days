@@ -6,11 +6,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!--
-      Fish SVG Cred:
-      https://thenounproject.com/search/?q=fish&i=589236
-   -->
-
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -90,7 +85,7 @@
 
       const toggleDone = e => {
         const target = e.target;
-        if (!target.matches("input")) return; // skip this unless it's an input
+        if (!target.matches("input")) return; 
         const index = target.dataset.index;
         items[index].done = !items[index].done;
         localStorage.setItem("items", JSON.stringify(items));
